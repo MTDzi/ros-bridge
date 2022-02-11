@@ -103,4 +103,5 @@ def generate_launch_description():
 
 
 if __name__ == '__main__':
+    a = 1
     generate_launch_description()

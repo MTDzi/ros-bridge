@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "colcon build --cmake-args '-DCMAKE_BUILD_TYPE=Debug'"
+        },
+
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "colcon test && colcon test-result"
+        },
+
+        {
+            "label": "xserver",
+            "type": "shell",
+            "command": "echo",
+            "args": [
+                "Please open http://localhost:3000/ using your favorite browser.\n(If you are using Docker Toolbox, open http://192.168.99.100:3000/ instead)"
+            ]
+        },
+
+        {
+            "label": "source",
+            "type": "shell",
+            // "command": "bash -i -c 'source \"/opt/carla-ros-bridge/install/setup.bash\";source \"/opt/carla/setup.bash\"'",
+            "command": "source \"/opt/carla-ros-bridge/install/setup.bash\";source \"/opt/carla/setup.bash\""
+        },
+
+        {
+            "label": "rviz2",
+            "type": "shell",
+            // "command": "bash -i -c 'ros2 run rviz2 rviz2'",
+            "command": "ros2 run rviz2 rviz2",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}

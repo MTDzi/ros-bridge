@@ -4,7 +4,6 @@ build.gradle
 .catkin_workspace
 
 # IDE
-.vscode
 .idea
 
 #colcon
